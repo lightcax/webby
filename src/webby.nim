@@ -24,7 +24,7 @@ proc encodeURIComponent*(s: string): string =
   for c in s:
     case c
     of 'a'..'z', 'A'..'Z', '0'..'9',
-      '-', '.', '_', '~', '!', '*', '\'', '(', ')':
+      '-', '.', '_', '~', '!', '*', '\'', '(', ')',',','=':
       result.add(c)
     else:
       result.add '%'
